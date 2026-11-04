@@ -206,11 +206,34 @@ En cada PC, entra a **Desktop → IP Configuration** y escribe:
 2. La tabla escrita con PC, puerto del switch y MAC.
 3. Respuestas breves a estas preguntas:
    4. ¿De dónde aprende el switch las direcciones MAC?
-   5. ¿Por qué falló el primer ping?
+   5. ¿Por qué falló el primer ping?: En mi caso el primer ping no falló
    6. ¿Qué tipo de entrada (dinámica o estática) tiene cada MAC y qué significa?
 7. Guarda tu archivo de Packet Tracer (`.pkt`) y entrégalo junto con lo anterior.
 
 
+
+# Actividad 3.3
+### switch de capa 2
+Decide por donde reenviar usando solo la direccion mac de la trama y sutabla de direcciones mac; trabaja dentro de una sola red (o una VLAN).
+
+### Switch de capa 3
+Ademas de conmutar por mac, puede enrutar usando la direccion ip del paquete y su tabla de rutas, y conecta varias redes o VLAN entre si.
+
+### Capa 2 frente a capa 3
+**Capa 2:** lee la mac, trabaja en una sola red, necesita un router para comunicar redes distintas y cuesta menos.
+
+**Capa 3:** Lee la mac e ip, conecta varias redes o 
+
+**Ejemplo: de una red a otra**
+Un equipo de la red 192.168.1.0/24 quiere hablar con la 192.168.2.0/24. Con un switch de capa 2 hace falta un router; un switch de capa 3 mira la ip de destino y crea una trama central.
+
+### Reemplazar un router?
+No del todo: el router sigue siendo la mejor opcion para conectar con el exterior (WAN, internet) y para funciones como NAT. el switcj de capa 3 se usa en campus y centros de datos para enrutar entre VLAN a alta velocidad.
+![[Tabla comparativa Switch 2 y Switch 3]]
+ººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººººº
+
+## Fibra optica: que es?
+Es un cable de vidrio o plastico muy delgado que transmite los datos como pulsos de luz en lugar de señales electricas.
 
 
 
