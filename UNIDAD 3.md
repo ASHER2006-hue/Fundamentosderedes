@@ -235,7 +235,105 @@ No del todo: el router sigue siendo la mejor opcion para conectar con el exterio
 ## Fibra optica: que es?
 Es un cable de vidrio o plastico muy delgado que transmite los datos como pulsos de luz en lugar de señales electricas.
 
+La luz viaja por el nuvleo y rebotan en sus paredes por reflexion total interna, porque el revestimiento que lo rodea desvoa la luz de la vuelta hacia adentro
+
+### Partes del cable de fibra
+De adentro hacia afuera: el nucleo que condice la luz; el revestimiento, que la mantiene adentro;
+el recubrimiento, que protege el vidrio; y la cubierta exterior.
+
+### Fibra multimodo
+Tiene un nucleo mas grueso )50 o 62.5 micras) por donde viajan varios haces a la vez, generados con LED; sirven para distancias cortas, como dentro de un edificio o un campus.
+
+### Componentes de un enlace de fibra
+Se necesita el cablle de fibra con conectores en sus extremos y un transceptor que convierte la señal electrica en luz; un convertidor de medios une equipos de cobre con la fibra
+
+### Transceptores
+Es un modulo intercambiable que se inserta en el puerto del switch o router y convierte la señal electrica; se elige segun el tipo de fibra, la distancia y la velocidad.
 
 
+### Tipos de transceptores
+Por velocidad: SFP 1gbps, SFP+ 10gbps, SFP28 25gbps, QSFP+ 40gbps, QSFP28 100gbps
+Por fibra: SX para multimodo y LX para monomodo.
+
+### Ventajas de la fibra optica
+Pfrece mucho mas ancho de banda, llega a nayires distancias, es inmune a las interferencias electromagneticas y es mas dificil de intervenir sin ser detectado.
+
+### Desventajas de la fibra optica
+Los equipos y los conectores cuestan mas, la instalacion y los empalmes requieren herramientas especializadas y el cable es mas fragil si se dobla demasiado.
 
 
+### Donde se usa la fibra optica
+En el backbone de internet, en los cables submarinos, en los enlaces entre edificios de un campus y en los centros de datos.
+
+### UTP frente a la fibra optica
+UTP: señal electrica, hasta 100m, econocimo, sensible a la interferencia.
+
+Fibra: pulsos de luz, desde cientos de metros hasta decenas de kilometros, mas costosa, inmune a la interferencia.
+
+
+### unicast, multicas y broadcast
+segun a cuentos equipos va dirigida, una comunicacion puede ser unicast (a uno), multicast(aun grupo), o broadcast (a todos).
+
+### Unicast: de uno a uno
+La trama va a un solo destinatario, identificado por su mac especifica; es el tipo de trafico mas comun, como abrir una pagina wev o copiar un archivo
+
+### Unicast en el switch
+El switch busca la mac de destino en su tabla de direcciones  envia la trama solo por el puerto donde esta ese equipo; si no lo conoce, la inunda por todos los puertos.
+
+### Multicast: de uno a un grupo
+La trama va a un grupo de equipos que se unieron a el; los demas la ignoran. En IPv4 usa direcciones de 244.0.0.0 q 239.255.255.255 y mac que empiezan con 01:00:5E
+
+
+### Broadcast: de uno a todos
+La trama llega a todos los equipos de la red, con MAC de destino FF:FF:FF:FF:FF:FF; todos la reciben y la procesan.
+
+# Actividad 3.3
+
+## Capa 3: Red y transporte
+
+### IPv4
+Es el protocolo de la capa de red que direccione y enruta los paquetes entre redes, usando direcciones de 32 bits (unos 4,300 millones en total).
+
+### Como se agotaron las direcciones ip
+las 4,300 millones de direcciones parecian suficientes, pero se repartieron en bloques por clases: una clase A daba mas de 16 millones a una sola organizacion. Ademas, los dispositivos conectados crecieron sin parar
+
+En 2011 la IANA entrego sus ultimos bloques a los registros regionales. se alargo la vida de IPv4 con CIDR, las direcciones privadas y NAT; la solucion definitiva es la IPv6.
+
+### Caracteristicas del IPv4
+Es sin conexion (cada paquete viaja por separado), de mejor esfuerzo (no garantiza la entrega) e independiente del medio (funciona sobre cobre, wifi o fibra).
+
+### Encabezado IPv4
+El encabezado mide 20 bytes como minimo y lleva la IP de origen, la IP de destino, el TTL (limite de saltos) y el campo protocolo (TCP,UDP o ICMP).
+
+### IPv6
+Usa direcciones de 128 bits y se creo porque las direcciones IPv4 se agotaron; permite un numero practicamente ilimitado de dispositivos.
+
+### Ventajas de IPv6
+Ofrece un espacio de direcciones enorme, un encabezado simplificado de 40 bytes, autoconfiguracion de direcciones y no usa broadcast: lo reemplaza con multicast.
+
+### Division de la red en grupos
+Una red grande se divide en subredes que son grupos de dispositivos organizados por ubicacion, funcion o departamento, cada uno con su propio rango de direcciones.
+
+### Red y host
+Toda direccion tiene dos partes: la parte de red, igual para todos los equipos del grupo y la parte del host, que identifica a cada equipo.
+
+La direccion sola no dice donde termina una y empieza la otra.
+
+### Direcciones publicas
+Las direcciones publicas son unicas en todo internet y las asigna el proveedor de servicio (ISP).
+
+Un equipo con direccion publica es alcanzable desde internet; las privadas no.
+
+### Direcciones privadas
+Se usan solo dentro de una red y no se enrutan en internet: 10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16. Para salir a internet usan NAT.
+
+### Direcciones especiales
+127.0.0.1 es el loopback (el propio equipo) y 169.254.0.0/16 es la asignacion automatica (APIPA) cuando falla el DHC
+
+0.0.0.0/0 es la ruta predeterminada.
+
+### Direcciones IPv4 
+Una direccion IPv4 tiene 32 bits escritos en 4 octetos decimales separados por puntos, como 192.1681.10; una parte identifica la red y otra el host.
+
+### Una direccion IPv4 en binario
+![[tabla.jpg]]
