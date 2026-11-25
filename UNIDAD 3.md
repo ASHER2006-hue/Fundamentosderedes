@@ -287,7 +287,7 @@ La trama va a un grupo de equipos que se unieron a el; los demas la ignoran. En 
 ### Broadcast: de uno a todos
 La trama llega a todos los equipos de la red, con MAC de destino FF:FF:FF:FF:FF:FF; todos la reciben y la procesan.
 
-# Actividad 3.3
+# Actividad 3.4
 
 ## Capa 3: Red y transporte
 
@@ -337,3 +337,6 @@ Una direccion IPv4 tiene 32 bits escritos en 4 octetos decimales separados por p
 
 ### Una direccion IPv4 en binario
 ![[tabla.jpg]]
+
+
+## Actividad 3.5
