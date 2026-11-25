@@ -116,7 +116,7 @@ Transmiten por ondas de radio (wi-fi, bluetooth, celular); dan movilidad, pero e
 ### ARP: de direcciom ip a doreccion MAC
 El protocolo ARP permite descubrir la direccion mac de un dispositivo a partir de su direccion ip. Envia una peticion que solo el dueño puede responder.
 
-# Actividad packet tracer 
+# Actividad packet tracer (3.2)
 ## Práctica 3: Tabla de direcciones MAC del switch
 **Unidad 3:** Capa física y de enlace de datos
 **Herramienta:** Cisco Packet Tracer
@@ -212,7 +212,7 @@ En cada PC, entra a **Desktop → IP Configuration** y escribe:
 
 
 
-# Actividad 3.3
+
 ### switch de capa 2
 Decide por donde reenviar usando solo la direccion mac de la trama y sutabla de direcciones mac; trabaja dentro de una sola red (o una VLAN).
 
@@ -287,8 +287,6 @@ La trama va a un grupo de equipos que se unieron a el; los demas la ignoran. En 
 ### Broadcast: de uno a todos
 La trama llega a todos los equipos de la red, con MAC de destino FF:FF:FF:FF:FF:FF; todos la reciben y la procesan.
 
-# Actividad 3.4
-
 ## Capa 3: Red y transporte
 
 ### IPv4
@@ -339,4 +337,4 @@ Una direccion IPv4 tiene 32 bits escritos en 4 octetos decimales separados por p
 ![[tabla.jpg]]
 
 
-## Actividad 3.5
+# Actividad 3.3
